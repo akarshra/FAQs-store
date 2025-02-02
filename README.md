@@ -1,21 +1,21 @@
-# FAQtory
+# FAQs-Store
 
-FAQtory is a tool to auto-generate a [FAQ.md](./FAQ.md) (Frequently Asked Questions) document for your project.
+FAQs-Store is a tool to auto-generate a [FAQ.md](./FAQ.md) (Frequently Asked Questions) document for your project.
 
 Additionally, a "suggest" feature uses fuzzy matching to reply to GitHub issues with suggestions from your FAQ.
 
 ## Getting started
 
-Faqtory is best installed via [pipx](https://github.com/pypa/pipx) to avoid any dependency conflicts:
+Faqs-Store is best installed via [pipx](https://github.com/pypa/pipx) to avoid any dependency conflicts:
 
 ```bash
-pipx install faqtory
+pipx install faqs-Store
 ```
 
 Run the following from the directory you wish to store the FAQ document. 
 
 ```bash
-faqtory init
+FAQs-Store init
 ```
 
 This will create the following files and directories:
@@ -41,14 +41,14 @@ alt_titles:
 FAQ stands for *Frequently Asked Questions*
 ```
 
-The filename is unimportant, but a `title` is mandatory. You can also optionally add alternative titles under `alt_titles` which will be used with the `faqtory suggest` feature (but not displayed).
+The filename is unimportant, but a `title` is mandatory. You can also optionally add alternative titles under `alt_titles` which will be used with the `FAQs-Store suggest` feature (but not displayed).
 
 ## Building
 
 Run the following command to build the FAQ:
 
 ```bash
-faqtory build
+FAQs-Store build
 ```
 
 With the default settings this will generate an [FAQ.md](./FAQ.md) file.
@@ -59,7 +59,7 @@ With the default settings this will generate an [FAQ.md](./FAQ.md) file.
 The "suggest" subcommand can compile a list of FAQ entries that match a supplied issue title. Here's an example:
 
 ```bash
-faqtory suggest "who is the author of FAQtory?"
+FAQs-Store suggest "who is the author of FAQs-Store?"
 ```
 
 This will generate a list of matching entries from the FAQ, and write Markdown to stdout. You can modify the output with the "suggest.md" template, which you will find in your ".faq/" directory (if you haven't configured it elsewhere),
